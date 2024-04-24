@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donors Table</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/index.css" />
+  <link rel="icon" type="image/png" href="/blood_drop_search.gif">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      position: relative;
+      padding-top: 135px;
+    }
+
+    .search-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #searchInput {
+      padding: 10px;
+      width: 50%;
+      max-width: 400px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .table-container {
+      width: 80%;
+      margin: 0 auto;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead {
+      background-color: #f2f2f2;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      font-weight: bold;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tbody tr:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+          <div class="logo">
+            <img src="/blood_drop_search.gif" alt="logo" />
+          </div>
+          <div class="options">
+            <a href="/index.html" target="_main">Home</a>
+            <a href="/new sign up.html" target="_main">Donor</a>
+            <a href="/about.html" target="_main">About us</a>
+            <a href="fetch.html">Receptor</a>
+            <a href="/Contact.html" target="_main">contact</a>
+            <button id="signIn">feedback</button>
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+    
+  <h1>Donors Table</h1>
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchDonors()">
+  </div>
+  <div class="table-container" id="donorsTableContainer">
+    <!-- Table will be dynamically populated here -->
+  </div>
+
+  <script>
+    function searchDonors() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("searchInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("donorsTable");
+      tr = table.getElementsByTagName("tr");
+
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0]; // Change index to the column you want to search
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // console.log(1);
+        $("#donorsTableContainer").load("retrieve_data.php");
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    /* background-image: donorimg.jpg; */
+  }
+  
+  form {
+    
+    box-shadow: 4px 4px 20px 4px rgb(0, 0, 0);
+    font-size: larger;
+    /* border-radius: 50%; */
+    /* max-width: 400px; */
+    margin-top: 165px;
+    border-radius: 40px;
+    border: 1px solid rgb(0, 0, 0);
+    /* border-style: dotted; */
+
+    position:absolute;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 35px;
+  margin-left: 76px;
+  width: 657px;
+}
+  
+  
+  label {
+    margin-top: 10px;
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  input,
+  select {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: calc(100% - 120px);
+    height: 30px;
+  }
+  
+  button {
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  .img img{
+    margin-left: 785px;
+  margin-top: 257px;
+  width: 650px;
+  height: 380px;
+  }

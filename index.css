@@ -1,0 +1,375 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 100;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+.main {
+  height: 100%;
+  width: 100%;
+}
+.logo {
+  padding-left: 3vw;
+  width: 30%;
+  font-size: 1.3vw;
+}
+.logo img {
+  height: 7vw;
+  width: 8vw;
+}
+
+.options {
+  margin: 0px;
+  font-size: 1.2vw;
+  padding: 0vw;
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 4vw;
+}
+.options a
+{
+  font-weight: 600;
+
+}
+.options i {
+  font-size: 2vw;
+  padding-top: 1vw;
+  color: white;
+  display: none;
+}
+.nav {
+  z-index: 1;
+  position: fixed;
+  background-color: rgb(194 40 40);
+  font-weight: 400;
+  height: 7vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.2vh solid rgba(0, 0, 0, 0.329);
+}
+.nav a {
+  text-decoration: none;
+  max-width: fit-content;
+  position: relative;
+  font-size: 1.2vw;
+  top: 0.7vw;
+  color: rgb(255, 255, 255);
+}
+
+.content {
+  position: absolute;
+  top: 110px;
+  display: flex;
+  height: calc(100% - 100px);
+  width: 100%;
+}
+.left {
+  height: 100%;
+  width: 50%;
+  padding: 5vw 4vw 0vw 4vw;
+}
+.left h1 {
+  font-size: 5vw;
+  line-height: 5vw;
+  margin: 0;
+}
+#explore {
+  font-size: 1.5vw;
+  padding: 1vw 2vw;
+  color: white;
+  background-color: rgba(255, 5, 5, 0.852);
+  border-radius: 5px;
+  border: 3px solid transparent;
+  font-weight: 100;
+}
+
+.left p {
+  width: 88%;
+  font-size: 1vw;
+  font-weight: 600;
+  color: #666;
+  margin-top: 3vw;
+  margin-bottom: 4vw;
+}
+span {
+  color: rgb(255, 0, 0);
+  font-weight: 400;
+}
+.right {
+  height: 100%;
+  width: 50%;
+}
+.right img {
+  position: relative;
+  top: 3vw;
+  width: 45vw;
+  height: 40vw;
+}
+#signIn {
+  font-size: 1.4vw;
+  padding: 0vw 1vw;
+  padding-top: 0px;
+  padding-bottom: 2px;
+  color: red;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: 2px solid transparent;
+  font-weight: 700;
+  height: 3vw;
+  position: relative;
+  right: 1.5vw;
+}
+@media (min-width: 600px) and (max-width: 950px) {
+  .nav {
+    width: 100%;
+  }
+  .logo {
+    font-size: 2vw;
+    width: 50%;
+  }
+
+  .options {
+    font-size: 2.1vw;
+    padding: 0vw 8vw;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 4vw;
+  }
+  .options h4 {
+    position: relative;
+    right: 4.5vw;
+  }
+  .options button {
+    font-size: 1.5vw;
+    height: 3.5vw;
+    position: absolute;
+    padding-top: 5px;
+    top: 2.3vw;
+    right: 0.5vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .left h1 {
+    font-size: 4vw;
+    line-height: 4vw;
+    margin: 0;
+  }
+  .left p {
+    font-size: 1.2vw;
+  }
+  .left button {
+    font-size: 2.7vw;
+  }
+  .right img {
+    width: 45vw;
+    position: relative;
+    top: 3vw;
+  }
+}
+
+#explore:hover {
+  border: 3px solid black;
+  background-color: rgba(214, 6, 6, 0.852);
+}
+.btns:hover {
+  border: 3px solid black;
+  background-color: rgba(214, 6, 6, 0.852);
+}
+#signIn:hover {
+  border: 2px solid black;
+  background-color: #ffdada;
+}
+button:active {
+  background-color: rgb(28, 149, 143);
+}
+@media (max-width: 600px) {
+  .nav {
+    height: 12vw;
+  }
+  .logo {
+    font-size: 5vw;
+  }
+  .logo img {
+    height: 9vw;
+  }
+  .options a {
+    display: none;
+  }
+  .options button {
+    display: none;
+  }
+  .options i {
+    display: block;
+    align-items: end;
+    position: absolute;
+    right: 10%;
+    top: 3vw;
+    font-size: 4vw;
+  }
+  .content {
+    width: 90%;
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+    height: 60vw;
+  }
+  .left h1 {
+    font-size: 8vw;
+    line-height: 7vw;
+  }
+  .left p {
+    font-size: 2vw;
+  }
+  .left button {
+    font-size: 4vw;
+  }
+  .right {
+    width: 100%;
+    height: 90vw;
+  }
+  .right img {
+    width: 80%;
+    height: 60vw;
+  }
+}
+
+#twoBtn {
+  position: relative;
+  bottom: 40px;
+  display: flex;
+  gap: 1vw;
+  flex-direction: column;
+}
+
+.btns {
+  /* display: none; */
+  border: 4px double white;
+  border-radius: 5px;
+  height: 3.5vw;
+  font-size: 1.5vw;
+  width: 19vw;
+  color: white;
+  background-color: rgba(255, 5, 5, 0.852);
+}
+
+.people {
+  position: relative;
+  left: 19%;
+  width: 65vw;
+  margin-top: 7vw;
+}
+.people h1 {
+  color: red;
+  text-align: center;
+  font-size: 4vw;
+}
+.people p {
+  font-weight: 400;
+  font-size: 1.2vw;
+}
+.people h3 {
+  color: red;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.5vw;
+}
+.details {
+  margin-top: 9%;
+  width: 80%;
+  font-size: 2vw;
+  display: flex;
+  gap: 3vw;
+  justify-content: space-around;
+}
+.opt {
+  position: relative;
+  left: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.opt p {
+  margin: 0px;
+}
+.camps {
+  border-right: 0.3vw solid red;
+  padding-right: 8vw;
+}
+.donors {
+  border-right: 0.3vw solid red;
+  padding-right: 5vw;
+}
+
+footer
+{
+  margin-top: 11vw;
+  width: 100%;
+  height: fit-content;
+  background-color: rgb(37, 38, 46);
+  color: white
+}
+
+.links
+{
+  display: flex;
+  justify-content: space-around;
+}
+.links ul
+{
+  display: flex;
+  gap: 1vw;
+  flex-direction: column;
+}
+.links p
+{
+  font-size: 1.4vw;
+  font-weight: 600;
+}
+.links a
+{
+  color: white;
+  text-decoration: none;
+}
+.imag
+{
+  margin-top: 2vw;
+  display: flex;
+  justify-content: space-around;
+  gap: 0vw;
+  padding-bottom: 3vw;
+  border-bottom: 1px solid white;
+}
+.pic 
+{
+  height: 4vw;
+}
+.copyright
+{
+  display: flex;
+  justify-content: space-around;
+  font-size: .7vw;
+  margin-top: 0;
+  border-bottom: 1px solid white;
+}
+.end
+{
+  text-align: center;
+  margin-top: .2vw;
+  padding-bottom: .2vw;
+  font-size: .8vw;
+}
+
